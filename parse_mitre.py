@@ -29,6 +29,7 @@ def filter(lst):
     return [i for i in lst.contents if i != "\n"]
 
 def fetch_mitre():
+    print("[*] Started fetching TTPs")
     # Tactics
     for tactic_id in tactics: 
         tactic_url = urljoin(url, tactic_id)

@@ -6,6 +6,7 @@
 
 import havocui
 import json
+import os 
 
 json_file = "/tmp/tactics.json"
 tactics = []
@@ -140,6 +141,9 @@ tree = havocui.Tree("MITRE Enterprise TTPs", select_ttp, True)
 
 def open_view():
     global tactics
+
+    if not os.path.exists(json_file):
+        havocui.messagebox("Error", f"{json_file} not found. Run python3 parse_mitre.py to create it or use the one provided in the mitre4havoc repository.")
     
     with open(json_file, "r") as f: 
         tactics = json.load(f)  

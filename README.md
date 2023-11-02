@@ -3,8 +3,12 @@
 This plugin adds a TreeView to the Havoc UI that displays all MITRE enterprise tactics, techniques and sub-techniques in an ordered fashion. This repository also includes `parse_mitre.py`, a tool that fetches the current TTPs directly from the MITRE framework and stores them in a JSON file, which is then used by the plugin.
 
 ## Setup & Usage
-After cloning the repository, it is first necessary to fetch the MITRE data by running the following command. After completion, the script will have created tactics.json in the `/tmp` directory. 
+After cloning the repository, it is first necessary to fetch the MITRE data by running the following command. After completion, the script will have created tactics.json in the `/tmp` directory. The script requires the python `bs4` and `requests` packages, which can be installed with pip.
+
 ```
+pip3 install bs4
+pip3 install requests
+
 python3 parse_mitre.py
 ```
 ![image](https://github.com/jakobfriedl/mitre4havoc/assets/71284620/fbceccf7-18c9-401b-abd5-6d1ffab830d2)
