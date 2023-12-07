@@ -8,7 +8,7 @@ import havocui
 import json
 import os 
 
-json_file = "/tmp/tactics.json"
+json_file = "/opt/Havoc/data/extensions/mitre4havoc/tactics.json"
 tactics = []
 infos = {}
 
